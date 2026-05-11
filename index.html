@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pajaris – Grupo Exclusivo</title>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2873019396377458');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2873019396377458&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- Fim Meta Pixel -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --gold:       #b8963e;
+      --gold-light: #d4b06a;
+      --gold-pale:  #e8d5a8;
+      --blue-deep:  #1a2d42;
+      --blue-mid:   #2d4a66;
+      --blue-pale:  #8aa8c4;
+      --bege:       #f0e8d8;
+      --ivory:      #faf7f2;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 100%; min-height: 100%;
+      background: var(--blue-deep);
+    }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      color: var(--bege);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 120% 80% at 50% -20%, #2d4a66 0%, transparent 55%),
+        radial-gradient(ellipse 50% 60% at 0% 100%, #243850 0%, transparent 50%),
+        var(--blue-deep);
+    }
+
+    .wrap {
+      position: relative; z-index: 1;
+      display: flex; flex-direction: column; align-items: center;
+      min-height: 100dvh;
+      padding: 64px 32px 56px;
+    }
+
+    .rule-top {
+      width: 1px; height: 48px;
+      background: linear-gradient(to bottom, transparent, var(--gold));
+      margin-bottom: 32px;
+    }
+
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(48px, 13vw, 92px);
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--bege);
+      text-align: center;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .sub-brand {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: clamp(9px, 1.8vw, 11px);
+      letter-spacing: .55em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .rule {
+      display: flex; align-items: center; gap: 16px;
+      width: min(360px, 85%);
+      margin-bottom: 44px;
+    }
+    .rule::before, .rule::after {
+      content: '';
+      flex: 1; height: 1px;
+      background: rgba(184,150,62,.35);
+    }
+    .rule-gem {
+      width: 5px; height: 5px;
+      border: 1px solid rgba(184,150,62,.6);
+      transform: rotate(45deg);
+    }
+
+    .headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(24px, 6vw, 42px);
+      letter-spacing: .04em;
+      text-align: center;
+      line-height: 1.35;
+      color: var(--ivory);
+      margin-bottom: 16px;
+    }
+
+    .tagline {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: clamp(9px, 2vw, 11px);
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      text-align: center;
+      color: var(--blue-pale);
+      line-height: 2;
+      max-width: 400px;
+      margin-bottom: 48px;
+    }
+    .tagline span { color: rgba(184,150,62,.5); margin: 0 6px; }
+
+    .benefits {
+      display: flex; gap: 40px;
+      margin-bottom: 52px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .benefit {
+      display: flex; flex-direction: column; align-items: center; gap: 9px;
+      opacity: .75;
+    }
+    .benefit-icon {
+      width: 38px; height: 38px;
+      border: 1px solid rgba(184,150,62,.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .benefit-icon svg {
+      width: 15px; height: 15px;
+      stroke: var(--gold-light);
+      fill: none;
+      stroke-width: 1.2;
+    }
+    .benefit span {
+      font-size: 8px;
+      letter-spacing: .45em;
+      text-transform: uppercase;
+      color: var(--gold-pale);
+      text-align: center;
+    }
+
+    .wpp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      background: #25d366;
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: clamp(10px, 2.2vw, 12px);
+      letter-spacing: .4em;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      transition: background .25s, transform .2s;
+      margin-bottom: 52px;
+    }
+    .wpp-btn:hover { background: #1db954; transform: translateY(-1px); }
+    .wpp-btn svg { width: 17px; height: 17px; fill: #fff; flex-shrink: 0; }
+
+    .timer-section {
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+    }
+    .timer-label {
+      font-size: 8px;
+      letter-spacing: .55em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: .55;
+    }
+    .t-block {
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+    }
+    .t-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(52px, 14vw, 80px);
+      color: var(--ivory);
+      letter-spacing: .06em;
+      line-height: 1;
+      min-width: 72px;
+      text-align: center;
+    }
+    .t-unit {
+      font-size: 8px;
+      letter-spacing: .5em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: .5;
+    }
+
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.2} }
+    .t-num.urgent { animation: pulse 1.2s ease infinite; }
+
+    .redir-note {
+      margin-top: 10px;
+      font-size: clamp(9px, 2vw, 11px);
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--blue-pale);
+      opacity: .6;
+      text-align: center;
+    }
+
+    .rule-bottom {
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      margin-top: 48px;
+      opacity: .4;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 8px;
+      letter-spacing: .5em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: .25;
+    }
+
+    @keyframes appear { from { opacity:0; transform:translateY(14px) } to { opacity:1; transform:none } }
+    .rule-top      { animation: appear .6s ease .05s both }
+    .brand         { animation: appear .6s ease .12s both }
+    .sub-brand     { animation: appear .6s ease .19s both }
+    .rule          { animation: appear .6s ease .26s both }
+    .headline      { animation: appear .6s ease .33s both }
+    .tagline       { animation: appear .6s ease .40s both }
+    .benefits      { animation: appear .6s ease .46s both }
+    .wpp-btn       { animation: appear .6s ease .53s both }
+    .timer-section { animation: appear .6s ease .60s both }
+    .redir-note    { animation: appear .6s ease .66s both }
+    .rule-bottom   { animation: appear .6s ease .72s both }
+    .footer        { animation: appear .6s ease .78s both }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="rule-top"></div>
+
+  <div class="brand">Pajaris</div>
+  <div class="sub-brand">Brazilian Beachwear &nbsp;&middot;&nbsp; Grupo Exclusivo</div>
+
+  <div class="rule"><div class="rule-gem"></div></div>
+
+  <h1 class="headline">Faça parte do nosso<br>círculo privado</h1>
+
+  <p class="tagline">
+    Lançamento antecipado
+    <span>&middot;</span>
+    Ofertas exclusivas
+    <span>&middot;</span>
+    A moda praia com estilo
+  </p>
+
+  <div class="benefits">
+    <div class="benefit">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span>Exclusividade</span>
+    </div>
+    <div class="benefit">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="10" r="4"/>
+          <path d="M12 14v7" stroke-linecap="round"/>
+          <path d="M9 18h6" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span>Para Mulheres</span>
+    </div>
+    <div class="benefit">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/>
+          <path d="M12 22V7"/>
+          <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
+          <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+        </svg>
+      </div>
+      <span>Ofertas VIP</span>
+    </div>
+  </div>
+
+  <a class="wpp-btn" href="https://chat.whatsapp.com/IDJC8mDQtm6GG9fjThpL0l?mode=gi_t" id="wppBtn">
+    <svg viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.845L.057 23.514a.5.5 0 0 0 .608.63l5.886-1.544A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.812 9.812 0 0 1-5.013-1.373l-.36-.214-3.724.977.993-3.621-.235-.372A9.817 9.817 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+    </svg>
+    Entrar no Grupo VIP
+  </a>
+
+  <div class="timer-section">
+    <div class="timer-label">Redirecionando automaticamente em</div>
+    <div class="t-block">
+      <div class="t-num" id="dSec">15</div>
+      <div class="t-unit">seg</div>
+    </div>
+  </div>
+
+  <p class="redir-note" id="rNote">Você será redirecionada automaticamente</p>
+
+  <div class="rule-bottom"></div>
+  <div class="footer">© Pajaris &nbsp;&middot;&nbsp; Moda Praia Premium</div>
+
+</div>
+
+<script>
+  const URL_WPP = 'https://chat.whatsapp.com/IDJC8mDQtm6GG9fjThpL0l?mode=gi_t';
+  const TOTAL = 10;
+  let left = TOTAL;
+
+  const elSec  = document.getElementById('dSec');
+  const elNote = document.getElementById('rNote');
+
+  function pad(n){ return String(n).padStart(2,'0'); }
+  elSec.textContent = pad(TOTAL);
+
+  const timer = setInterval(()=>{
+    left--;
+    elSec.textContent = pad(left);
+
+    if(left <= 5){
+      elSec.classList.add('urgent');
+      elNote.textContent = 'Redirecionando em ' + left + (left !== 1 ? ' segundos' : ' segundo') + '…';
+    }
+
+    if(left <= 0){
+      clearInterval(timer);
+      // dispara evento de clique no WhatsApp antes de redirecionar
+      fbq('track', 'Lead');
+      window.location.href = URL_WPP;
+    }
+  }, 1000);
+
+  // rastreia clique manual no botão
+  document.getElementById('wppBtn').addEventListener('click', function(){
+    fbq('track', 'Lead');
+  });
+</script>
+</body>
+</html>
